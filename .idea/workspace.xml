@@ -1,7 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="71fec195-c50c-4180-bfeb-312817572943" name="Default" comment="" />
+=======
+    <list default="true" id="71fec195-c50c-4180-bfeb-312817572943" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/completes_coursera/COH-PIAH.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/COH-PIAH.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/COH-PIAH.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/Conversor Bin e Hex 2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/Conversor Bin e Hex 2.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/Conversor Bin e Hex 2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/Conversor Bin e Hex.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/Conversor Bin e Hex.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/Conversor Bin e Hex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/Deletar itens repetidos lista.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/Deletar itens repetidos lista.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/Deletar itens repetidos lista.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/Jogo do nym eu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/Jogo do nym eu.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/Jogo do nym eu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/Jogo do nym.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/Jogo do nym.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/Jogo do nym.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/bubble_sort.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/bubble_sort.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/bubble_sort.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/busca_binaria.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/busca_binaria.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/busca_binaria.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/busca_sequencial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/busca_sequencial.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/busca_sequencial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/decisao_reflorestamento.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/decisao_reflorestamento.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/decisao_reflorestamento.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/elefantes_recursiva.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/elefantes_recursiva.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/elefantes_recursiva.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/encontra_impares.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/encontra_impares.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/encontra_impares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/fatorial_recursivo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/fatorial_recursivo.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/fatorial_recursivo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/fibonnacci_recursivo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/fibonnacci_recursivo.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/fibonnacci_recursivo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/ilustrated_python.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/ilustrated_python.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/ilustrated_python.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/insertion_sort.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/insertion_sort.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/insertion_sort.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/invertendo sequencia.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/invertendo sequencia.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/invertendo sequencia.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/maior numero lista.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/maior numero lista.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/maior numero lista.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/maiusculas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/maiusculas.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/maiusculas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/menor_nome.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/menor_nome.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/menor_nome.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/mult matriz.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/mult matriz.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/mult matriz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/ordenada.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/ordenada.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/ordenada.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/sequencia_ordenada.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/sequencia_ordenada.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/sequencia_ordenada.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/soma numeros lista.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/soma numeros lista.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/soma numeros lista.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/soma_lista_recursiva.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/soma_lista_recursiva.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/soma_lista_recursiva.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/test_triangulo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/test_triangulo.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/test_triangulo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/triangulo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/triangulo.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/triangulo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/triangulo2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/completes_coursera/triangulo2.py" beforeDir="false" afterPath="$PROJECT_DIR$/complete_snippets/triangulo2.py" afterDir="false" />
+    </list>
+>>>>>>> Stashed changes
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +116,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< Updated upstream
       <file leaf-file-name="ilustrated_python.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ilustrated_python.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -68,12 +130,23 @@
         <entry file="file://$PROJECT_DIR$/automate_it.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="189">
+=======
+      <file leaf-file-name="automate_it.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/automate_it.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="388">
+>>>>>>> Stashed changes
               <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="automate_boring_stuff.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/automate_boring_stuff.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -86,7 +159,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+<<<<<<< Updated upstream
     <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/mastering-pycharm-course" />
+=======
+    <option name="UPDATE_TYPE" value="REBASE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+>>>>>>> Stashed changes
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -116,6 +194,7 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/automate_it.py" />
         <option value="$PROJECT_DIR$/ilustrated_python.py" />
+        <option value="$PROJECT_DIR$/automate_boring_stuff.py" />
       </list>
     </option>
   </component>
@@ -137,7 +216,7 @@
       <path value="$USER_HOME$/mastering-pycharm-course/demos/projects/web_serverside/first_pyramid/first_pyramid/static/node_modules/bootstrap/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="20" />
     <option name="y" value="3" />
     <option name="width" value="1340" />
@@ -159,6 +238,14 @@
             </path>
             <path>
               <item name="Python" type="b2602c69:ProjectViewProjectNode" />
+<<<<<<< Updated upstream
+=======
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+              <item name="Programs-in-Python" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
+>>>>>>> Stashed changes
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -174,14 +261,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Vinicius &amp; Thais\Dropbox\Programacao\Python\venv" />
+      <recent name="C:\Users\Vinicius &amp; Thais\Dropbox\Programacao\Python" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Vinicius &amp; Thais\Dropbox\Programacao\Python\completes_coursera" />
       <recent name="C:\Users\Vinicius &amp; Thais\Dropbox\Programacao\Python" />
       <recent name="C:\Users\Vinicius &amp; Thais\Dropbox\Programacao\Python\Programs-in-Python" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Vinicius &amp; Thais\Dropbox\Programacao\Python\venv" />
-      <recent name="C:\Users\Vinicius &amp; Thais\Dropbox\Programacao\Python" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -360,6 +447,14 @@
       <option name="presentableId" value="Default" />
       <updated>1525312363483</updated>
     </task>
+    <task id="LOCAL-00001" summary="Create new py file, about my training based on the book: Automate the Boring Stuff with python, by Al Sweigart.">
+      <created>1529886579762</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1529886579762</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -405,7 +500,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50151974" side_tool="true" weight="0.32838285" />
@@ -414,7 +508,11 @@
       <window_info anchor="bottom" id="Python Console" order="7" sideWeight="0.49921876" weight="0.34158415" />
       <window_info anchor="bottom" x="17" y="493" width="1324" height="189" id="Run" order="2" sideWeight="0.49848023" weight="0.33663365" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32838285" />
+<<<<<<< Updated upstream
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.490099" visible="true" weight="0.362462" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.490099" visible="true" weight="0.40425533" />
+>>>>>>> Stashed changes
       <window_info anchor="right" id="R Packages" order="3" weight="0.32978722" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="R Graphics" order="3" weight="0.32978722" />
@@ -434,12 +532,14 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
     <layout-to-restore>
+<<<<<<< Updated upstream
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32838285" />
+=======
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32838285" />
+>>>>>>> Stashed changes
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" x="17" y="493" width="1324" height="189" id="Run" order="2" sideWeight="0.49848023" weight="0.33663365" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" sideWeight="0.5061425" side_tool="true" weight="0.25835866" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.490099" visible="true" weight="0.30091184" />
       <window_info id="Structure" order="1" sideWeight="0.509901" side_tool="true" weight="0.26975685" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -448,17 +548,19 @@
       <window_info anchor="right" id="R Graphics" order="3" weight="0.32978722" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32838285" />
       <window_info anchor="right" id="R Packages" order="4" weight="0.32978722" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49921876" weight="0.34158415" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" x="0" y="0" width="294" height="544" id="Documentation" order="7" side_tool="true" weight="0.32978722" />
       <window_info anchor="right" id="Database" order="5" weight="0.32978722" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32838285" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50151974" side_tool="true" weight="0.32838285" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32838285" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="6" weight="0.32978722" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32838285" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39933994" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49921876" weight="0.34158415" />
+      <window_info id="Favorites" order="2" sideWeight="0.5061425" side_tool="true" weight="0.25835866" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,6 +568,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Create new py file, about my training based on the book: Automate the Boring Stuff with python, by Al Sweigart." />
+    <option name="LAST_COMMIT_MESSAGE" value="Create new py file, about my training based on the book: Automate the Boring Stuff with python, by Al Sweigart." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -486,7 +592,27 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ilustrated_python.py">
+    <entry file="file://$PROJECT_DIR$/complete_snippets/ilustrated_python.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="88" column="26" lean-forward="true" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/automate_it.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/complete_snippets/ilustrated_python.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
@@ -500,8 +626,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ilustrated_python.py">
+    <entry file="file://$PROJECT_DIR$/complete_snippets/ilustrated_python.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="102">
           <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
         </state>
@@ -821,12 +948,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+=======
+        <state relative-caret-position="408">
+          <caret line="88" column="26" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/automate_it.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="189">
+=======
+        <state relative-caret-position="388">
+>>>>>>> Stashed changes
           <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
@@ -834,6 +972,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$USER_HOME$/.PyCharm2018.1/system/python_stubs/850757211/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -847,6 +986,10 @@
           <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
+=======
+    <entry file="file://$PROJECT_DIR$/automate_boring_stuff.py">
+      <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> Stashed changes
     </entry>
   </component>
 </project>
