@@ -31,7 +31,30 @@ def parse_bs4():
     for img in images:
         print ("Image Source:", img)
 
+from selenium import webdriver
+def webdriver_test():
+    """
+    Automatiza a abertura do navegador e cliques possíveis...
+    :return: Login Facebook
+    """
+    browser = webdriver.Chrome()
+    print("WebDriver object", browser)
+    browser.maximize_window()
+    browser.get('https://facebook.com')
+    email = browser.find_element_by_name('email')
+    swordfish = browser.find_element_by_name('pass')
+    print ('Html elements')
+    print ('Email: ', email, '\nPassword: ', swordfish)
+    email.send_keys('viniciusmunizmel@yahoo.com.br') #envia o e-mail correto
+    swordfish.send_keys('mudar') #envia a senha
+    browser.find_element_by_id('loginbutton').click() #clica no login
+    browser.implicitly_wait('5') #espera 5 segundos
+    browser.save_screenshot('testeok.png') #tira um print...
+    print(browser.current_url, browser.title)
+
+
+
 
 if __name__ == '__main__':
     #print(requests.get("https://www.google.com/search?q=avatar&sourcelnms&tbm=isch").status_code)
-    parse_bs4()
+    webdriver_test()
