@@ -2,15 +2,15 @@
 """
 Created on September 15
 
-@author: brmelovi
+@author: vinimmelo
 
 Training the use of OS library.
 """
 
 import os, shelve
 
-boringStuff = os.path.join('C:\\', 'Users', 'brmelovi', 'OneDrive - NESTLE', 'Importante', 'Programs', 'Python', 'BoringStuff')
-deskDir = r'C:\Users\brmelovi\Desktop\\'
+boringStuff = os.path.join('C:\\', 'Users', 'vinimmelo', 'OneDrive - NESTLE', 'Importante', 'Programs', 'Python', 'BoringStuff')
+deskDir = r'C:\Users\vinimmelo\Desktop\\'
 
 def os_samples():
   print(os.getcwd()) #get the actual working directory

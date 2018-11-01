@@ -1,7 +1,7 @@
 #! python3
 """
 Created on August 15
-@author: brmelovi
+@author: vinimmelo
 
 ticTacToe game, basic game with board on shell.
 """

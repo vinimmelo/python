@@ -1,5 +1,5 @@
 """
-@author: brmelovi
+@author: vinimmelo
 
 UnitTest triangulo
 """

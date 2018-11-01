@@ -1,5 +1,5 @@
 """
-@author: brmelovi
+@author: vinimmelo
 
 Factorial recursive
 """

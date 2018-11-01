@@ -1,5 +1,5 @@
 """
-@author: brmelovi
+@author: vinimmelo
 
 Triangles properties and characteristics implemented in a class.
 """

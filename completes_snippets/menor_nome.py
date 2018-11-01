@@ -1,5 +1,5 @@
 """
-@author: brmelovi
+@author: vinimmelo
 
 Select smaller word in a list.
 """

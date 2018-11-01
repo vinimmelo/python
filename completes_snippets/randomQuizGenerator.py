@@ -1,7 +1,7 @@
 #! python3
 """
 Created on August 20
-@author: brmelovi
+@author: vinimmelo
 
 # randomQuizGenerator.py - Create quizzes with questions and answers in
 # random order, along with the answer key.
@@ -27,7 +27,7 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
 'Charleston', 'Wisconsin': 'Madison', 'Wyoming': 'Cheyenne'}
 
 
-deskDir = r'C:\Users\brmelovi\Desktop\\'
+deskDir = r'C:\Users\vinimmelo\Desktop\\'
 
 for quizNum in range(35):
     #Create the quiz and answer key files

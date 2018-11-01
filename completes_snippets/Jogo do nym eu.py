@@ -1,5 +1,5 @@
 """
-@author: brmelovi
+@author: vinimmelo
 
 NIM Game
 Based on the course: [Introdução a ciência da computação - Coursera]

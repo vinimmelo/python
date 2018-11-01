@@ -1,5 +1,5 @@
 """
-@author: brmelovi
+@author: vinimmelo
 
 Based on: Ilustrated Python[Book]
 """
