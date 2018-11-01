@@ -1,3 +1,12 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Nov 01
+
+@author: brmelovi
+
+WebDriver automated test
+"""
+
 import requests
 from lxml import html
 import bs4
