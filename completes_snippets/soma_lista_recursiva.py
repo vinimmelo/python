@@ -1,3 +1,9 @@
+"""
+@author: brmelovi
+
+Sum elements in a list recursively
+"""
+
 def soma_lista(lista):
     if len(lista)<=1:
         return lista[0]

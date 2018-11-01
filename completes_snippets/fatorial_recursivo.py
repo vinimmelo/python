@@ -1,3 +1,9 @@
+"""
+@author: brmelovi
+
+Factorial recursive
+"""
+
 def fatorial(x):
     if x<=1:
         return 1

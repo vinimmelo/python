@@ -1,3 +1,9 @@
+"""
+@author: brmelovi
+
+Based on: Ilustrated Python[Book]
+"""
+
 def open_file(name, lista):
     with open(name,'w') as fin:
         fin.write('name,adress,age\n')
@@ -33,6 +39,9 @@ def busca_binaria(lista, elemento, min=0, max=None):
 
 lista_teste = [-10, -2, 0, 5, 66, 77, 99, 102, 239, 567, 875, 934]
 
+def maior_elemento(lista):
+    lista_max = max(lista)
+    return lista_max
 
 class Cats:
     patas = 4

@@ -1,3 +1,9 @@
+"""
+@author: brmelovi
+
+Triangles properties and characteristics implemented in a class.
+"""
+
 class Triangulo:
     def __init__(self, a, b, c):
         self.a = a

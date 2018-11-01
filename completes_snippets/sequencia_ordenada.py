@@ -1,3 +1,11 @@
+"""
+@author: brmelovi
+
+- Insertion Sort
+- create ordened list
+- create random lsit
+"""
+
 import random
 import time
 import unittest

@@ -1,3 +1,9 @@
+"""
+@author: brmelovi
+
+Select smaller word in a list.
+"""
+
 def menor_nome(lista):
     menor = len(lista[0].strip())
     novinha = lista[0].strip()
@@ -7,4 +13,3 @@ def menor_nome(lista):
             menor = len(new)
             novinha = new
     return novinha.capitalize()
-    

@@ -1,3 +1,9 @@
+"""
+@author: brmelovi
+
+Sum elements in a list.
+"""
+
 lista_teste = [1, 2, 10, 25, 15, 40, 2, 37]
 
 def soma_elementos(lista):

@@ -1,3 +1,12 @@
+"""
+@author: brmelovi
+
+NIM Game
+Based on the course: [Introdução a ciência da computação - Coursera]
+>>> website link Part 1: https://pt.coursera.org/learn/ciencia-computacao-python-conceitos
+>>> website link Part 2: https://pt.coursera.org/learn/ciencia-computacao-python-conceitos-2
+"""
+
 computador = 0
 usuario = 0
 rodada = 0
@@ -15,14 +24,14 @@ def computador_escolhe_jogada(n, m):
                 else:
                         print("Agora restam ", n-(n%(m+1)), " peças no tabuleiro.")
                         return n%(m+1)
-				
 
-   
+
+
 
 def usuario_escolhe_jogada(n, m):
         usuario=0
         while 1>0:
-                
+
                 r = int(input("Quantas peças você vai tirar? "))
                 if r<=m and r>0:
                         print("Agora restam ", n-r, " peças no tabuleiro.")
@@ -31,7 +40,7 @@ def usuario_escolhe_jogada(n, m):
                 else:
                         usuario= 1+usuario
                         print("Oops! Jogada inválida! Tente de novo")
-   
+
 
 def partida():
 	while 1>0:
@@ -40,7 +49,7 @@ def partida():
 			break
 		else:
 			print("Oops, tente novamente!")
-			
+
 	while 1>0:
 		m = int(input("Limite de peças por jogada? "))
 		if m>0 and m<=n:
@@ -103,4 +112,3 @@ while computador>=0:
 			break
 		else:
 			print("Escolha apenas entre 1 ou 2")
-

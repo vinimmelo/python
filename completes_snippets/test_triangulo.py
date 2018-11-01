@@ -1,5 +1,11 @@
+"""
+@author: brmelovi
+
+UnitTest triangulo
+"""
+
 from unittest import TestCase
-from completes_coursera.triangulo2 import *
+from triangulo import Triangulo
 
 a = Triangulo(1, 2, 3)
 b = Triangulo(2, 4, 6)

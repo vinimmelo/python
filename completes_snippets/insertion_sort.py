@@ -1,3 +1,8 @@
+"""
+@author: brmelovi
+
+Insertion Sort
+"""
 def insertion_sort(lista):
     nova_lista = []
     for x in lista:

@@ -1,3 +1,9 @@
+"""
+@author: brmelovi
+
+Multiplication of Matrix
+"""
+
 import math
 
 
@@ -17,7 +23,5 @@ def raio() -> object:
     area = (rai**2)*numero
     return print(area)
 
-
 if __name__ == '__main__':
-
     raio()
