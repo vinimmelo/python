@@ -2,7 +2,7 @@
 """
 Created on Nov 01
 
-@author: brmelovi
+@author: vinimmelo
 
 WebDriver automated test
 """
