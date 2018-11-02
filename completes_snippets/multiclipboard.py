@@ -1,6 +1,6 @@
 #! python3
 """
-Created on Nov 01
+Created on 01 November 2018
 
 @author: vinimmelo
 
