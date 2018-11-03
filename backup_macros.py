@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Create copy from macros in productivity.
-Always add the path name and the 5 first letters of the archive to the variables:
-    nomes:
-    sources:
+# Created on 15 September 2018
+# @author vinimmelo
+# Description:
+Create a backup from macros in productivity.
 Automatize the process of backup and version control.
 """
 
@@ -19,10 +19,6 @@ target = os.path.abspath(r'C:\Users\brmelovi\OneDrive - NESTLE\Script\backups')
 
 
 def backup(source: str, name: str):
-    """
-    names don't have to be the WHOLE name
-    Just a part of it.
-    """
     try:
         arquivos_diretorio = os.listdir(source)
         for x in arquivos_diretorio:
@@ -34,7 +30,7 @@ def backup(source: str, name: str):
         return status
     except IOError as e:
         status = False
-        print("Error: " + e)
+        print("IOError: " + e)
         exit(1)
         return status
     except:
@@ -43,19 +39,19 @@ def backup(source: str, name: str):
 
 
 def create_folder():
-    """
-    create a log that count if the things go right or wrong.
-    """
+    #create a log that count if the things go right or wrong.
+
     efetuados = 0
     now = datetime.date.today()
     backup_diario = 'Backup ' + str(now)
     os.chdir(target)
+    assert not os.path.isdir(backup_diario), "Diretório já criado, favor verificar!"
     new_zip = ZipFile(file=backup_diario + '.zip', mode="w")
     try:
         arquivos_diretorio = os.listdir()
         for arqs in arquivos_diretorio:
             if os.path.isfile(arqs) and not arqs.endswith('.zip'):
-                print(arqs)
+                print("{1} -> {0}".format(arqs, efetuados + 1))
                 new_zip.write(filename=arqs, compress_type=ZIP_DEFLATED)
                 os.remove(arqs)
                 efetuados += 1
@@ -64,7 +60,7 @@ def create_folder():
         move(backup_diario + '.zip', backup_diario)
         return efetuados
     except Exception as e:
-        print('Deu ruim no log...' + e)
+        print('Bug in create_folder function...' +  str(e))
         return 0
 
 
@@ -78,11 +74,11 @@ def principal():
     global nomes
     nomes = [ \
         'Credit Analysis', #0
-    	'macro', #1
+    	'macro Correos', #1
     	'Remessa Macro', #2
     	'Relatorios', #3
     	'Automação', #4
-    	'macro', #5
+    	'macro Ajuste Fijo', #5
     	'Macro Sucata', #6
     	'Planilha', #7
     	'Matriz', #8
@@ -95,7 +91,8 @@ def principal():
     	'O2C Incident Log.xlsb', #15
     	'DB_O2C', #16
     	'Macro Tickets', #17
-    	'Macro Cheques Chile', #18
+    	'Macro Cheques Chile v2', #18
+        'BDP0 México', #19
 	    ]
     #Append sources bellow:
     global sources
@@ -119,6 +116,7 @@ def principal():
     	r'N:\NBS_AR\SISTEMAS AR\O2C_Incident_Log', #16
     	r'N:\NBS_AR\CASH\APPLY\Argentina\9.0 - Documentos de uso diário', #17
     	r'N:\NBS_AR\CASH\APPLY\3.0 MATERIAL DE APOIO\3.1 MACROS', #18
+        r'N:\NBS_AR\OHM\15.0 BDP0 México\Macro', #19
 	    ]
     status = []
     for i in range(len(sources)):
@@ -129,11 +127,11 @@ def principal():
 def main():
     status = principal()
     efetuados = create_folder()
-    assert efetuados == len(nomes)
+    assert efetuados == len(nomes), "The quantity of copied files need to be the same of the zipped files."
     if (efetuados):
-        print('Nice, were made: ' + str(efetuados) + ' backups!\n' + str(len(nomes)) + ' backups which should have been done!\n')
+        print('\n\nNice, were made: ' + str(efetuados) + ' backups!\n' + str(len(nomes)) + ' backups which should have been done!\n')
     else:
-        print('Algo deu errado\n')
+        print('Something is wrong!\n')
 
 if __name__ == '__main__':
     main()
