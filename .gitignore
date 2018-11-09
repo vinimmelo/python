@@ -31,6 +31,7 @@ MANIFEST
 *.manifest
 *.spec
 *.bat
+*.ps1
 
 # Installer logs
 pip-log.txt
