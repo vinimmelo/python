@@ -108,3 +108,4 @@ venv.bak/
 #internal projects
 *internal.py
 only_test.py
+*.pyc
