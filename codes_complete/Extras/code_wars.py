@@ -28,6 +28,42 @@ def descending_order(num):
     return ''.join(map(str, new_list))
 
 
+def digital_root(n):
+    #recursive sum of all the digits in a single number.
+    if n >= 10:
+        x = n //10
+        y = digital_root(x) + n % 10
+        if(y >= 10):
+            return digital_root(y)
+        else:
+            return y
+    else:
+        return n
+
+
+def validate_pin(pin):
+    #Accept pins with 4 or 6 digits (only numbers)
+    try:
+        return (len(pin) == 4 or len(pin) == 6) and int(pin) >= 0 and pin.isdigit()
+    except:
+        return False
+
+
+def bool_to_word(bool):
+    return "Yes" if bool else "No"
+
+
+def number(bus_stops):
+    sum = 0
+    subtrain = 0
+    for x in bus_stops:
+        sum += x[0]
+        subtrain +=x[1]
+    return sum - subtrain
+
+
+
+
 if __name__ == '__main__':
-    descending_order(15)
-    print(descending_order(123456789))
+    print(number([[10,0],[3,5],[5,8]]))
+    print(number([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]))
