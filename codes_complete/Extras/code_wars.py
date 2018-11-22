@@ -61,9 +61,28 @@ def number(bus_stops):
         subtrain +=x[1]
     return sum - subtrain
 
+def series_sum(n):
+    series = [1.0 / (1.0 + (x * 3)) for x in range(100)]
+    soma = 0
+    for x in range(n):
+        soma += series[x]
+    return str("%.2f" % (soma))
 
+
+def alphabet_position(text):
+    new_text = [x.lower() for x in text if x.isalpha()]
+    word = [str(ord(y) - 96) + ' ' for y in new_text if ord(y) >= 97 and ord(y) <= 122]
+    return ''.join(word).strip()
+
+
+def pig_it(text):
+    return ' '.join([i[1:] + i[0] + 'ay' if i.isalpha() else i for i in text.split(' ')])
+
+
+def sort_by_length(arr):
+    return sorted(arr, key=len)
 
 
 if __name__ == '__main__':
-    print(number([[10,0],[3,5],[5,8]]))
-    print(number([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]))
+    print(sort_by_length(["i", "to", "beg", "life"]))
+    print(sort_by_length(["Telescopes", "Glasses", "Eyes", "Monocles"]))
