@@ -8,14 +8,8 @@ def index(request):
     return render(request, 'index.html')
 
 def exibir(request, perfil_id):
-    perfil = Perfil()
 
-    if perfil_id == '1':
-        perfil = Perfil(nome='Flavio Almeida', email='flavio@flavio.com.br', telefone= '34411441', nome_empresa='Alura')
-    elif perfil_id == '2':
-        perfil = Perfil('Romulo Henrique', 'romulo@romulo.com.br', '888888', 'Caelum')
-    elif perfil_id == '3':
-        perfil = Perfil('Vinícius Melo', 'vinicius@vinicius.com', '99999999', 'Open Source')
+    perfil = Perfil.objects.get(id=perfil_id)
 
     print("Id do perfil recebido: %s" % (perfil_id))
     return render(request, 'perfil.html', {'perfil' : perfil})
