@@ -5,3 +5,5 @@ selenium
 django
 pyperclip
 openpyxl
+flask
+flask-restful
