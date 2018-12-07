@@ -89,7 +89,6 @@ def find_next_square(sq):
 
 
 def first_non_repeating_letter(string):
-    converted = string.lower()
     for x in string:
         if string.lower().count(x) == 1 or string.upper().count(x) == 1: return x
     return ''
