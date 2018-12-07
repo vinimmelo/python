@@ -84,12 +84,16 @@ def sort_by_length(arr):
 
 
 def find_next_square(sq):
-    # Return the next square if sq is a square, -1 otherwise
     list_squares = [x*x for x in range(2000)]
-    #if sq in list_squares:
     return list_squares[list_squares.index(sq) + 1] if sq in list_squares else -1
-    #return -1
+
+
+def first_non_repeating_letter(string):
+    converted = string.lower()
+    for x in string:
+        if string.lower().count(x) == 1 or string.upper().count(x) == 1: return x
+    return ''
+
 
 if __name__ == '__main__':
-    print(find_next_square(121))
-    print(find_next_square(625))
+    print(first_non_repeating_letter('stress'))
