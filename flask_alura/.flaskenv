@@ -1,0 +1,3 @@
+FLASK_APP=jogoteca.py
+FLASK_DEBUG=1
+

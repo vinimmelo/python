@@ -6,7 +6,7 @@ api = Api(app)
 
 todos = {}
 
-class TodoSimpe(Resource):
+class TodoSimple(Resource):
     def get(self, todo_id):
         return {todo_id: todos[todo_id]}
 
