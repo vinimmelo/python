@@ -33,6 +33,13 @@ def test_sort_by_length():
         assert cw.sort_by_length(inp) == exp
 
 
+def test_first_non_repeating_letter():
+    assert cw.first_non_repeating_letter('a') == 'a'
+    assert cw.first_non_repeating_letter('stress') == 't'
+    assert cw.first_non_repeating_letter('moonmen') == 'e'
+    assert cw.first_non_repeating_letter('sTreSS') == 'T'
+
+
 def test_find_next_square():
     assert cw.find_next_square(121) == 144
     assert cw.find_next_square(625) == 676
