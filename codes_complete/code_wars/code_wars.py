@@ -94,5 +94,52 @@ def first_non_repeating_letter(string):
     return ''
 
 
+def diamond(n):
+    if n <= 0 or n % 2 == 0:
+        return None
+    middle = (n // 2) + 1
+    result = ""
+    if n == 1: return "*"
+    for i in range(middle):
+        result += ("*" * ((i * 2) + 1)).rjust(middle+i)
+        result += "\n"
+    for i in range(middle-2, -1, -1):
+        result += ("*" * ((i * 2) + 1)).rjust(middle+i)
+        result += "\n"
+    return result
+
+
+def move_zeros(lista: list):
+    zero_indexes = [x for x in lista if x != 0 or x is False]
+    for x in range((len(lista)-len(zero_indexes))):
+        zero_indexes.append(0)
+    return zero_indexes
+
+
+class Dictionary:
+    def __init__(self,words):
+        self.words=words
+    def find_most_similar(self,term):
+        most_similar = 0
+        similar_term = self.words[0]
+        for x in self.words:
+            similarity = 0
+            for letter in term:
+                if letter in x:
+                    similarity += 1
+            if abs(len(term) - len(x)) == 2: similarity += 1
+            if abs(len(term) - len(x)) == 1: similarity += 2
+            if abs(len(term) - len(x)) == 0: similarity += 2
+            try:
+                for index in range(len(term) -1):
+                    if term[index] == x[index]: similarity += 1
+            except:
+                None
+            if similarity > most_similar:
+                similar_term = x
+                most_similar = similarity
+        return similar_term
+
+
 if __name__ == '__main__':
-    print(first_non_repeating_letter('stress'))
+    print(move_zeros([False,1,0,1,2,0,1,3,"a"]))
