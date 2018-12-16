@@ -15,12 +15,12 @@ def print_header() :
 def run_event_loop() :
     print('What you want to do with your journal?')
 
-    cmd = None
+    cmd = "EMPTY"
 
     journal_name = 'default'
     journal_data = journal.load(journal_name)
 
-    while cmd != 'X':
+    while cmd != 'X' and cmd:
         cmd = input('[L]ist entries, [A]dd entry, E[x]it: ')
         cmd = cmd.upper().strip()
 
