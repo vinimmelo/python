@@ -3,7 +3,7 @@ from unittest import TestCase
 from codes_complete.Alura.leilao.dominio import Leilao, Lance, Usuario
 
 
-class TestAvaliador(TestCase) :
+class TestLeilao(TestCase) :
 
     def setUp(self):
         self.gui = Usuario('Gui')
