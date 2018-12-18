@@ -1,28 +1,21 @@
-class Dog():
-    """ A Simple atempt to model a dog. """
+"""
+Created on 17 December 2018
+@author vinimmelo
+Training Module of Python Crash Course book!
+"""
 
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-    def sit(self):
-        print(self.name.title() + " is now sitting.")
-
-    def roll_over(self):
-        print(self.name.title() + ' rolled over!')
-
-    def __str__(self):
-        return f"{self.name} has {self.age} years old!"
+from collections import OrderedDict
+from random import randint
 
 
-class Restaurant():
-    def __init__(self, restaurant_name, cuisine_type):
-        self.restaurant_name = restaurant_name
-        self.cuisine_type = cuisine_type
+def page_185():
+    favorite_languages = OrderedDict()
 
-    def describe_restaurant(self):
-        print(f"The restaurant is called by the name: {self.restaurant_name}\n" +
-              f"And the cuisine type is: {self.cuisine_type}")
+    favorite_languages['jen'] = 'python'
+    favorite_languages['sarah'] = 'c'
+    favorite_languages['edward'] = 'ruby'
+    favorite_languages['phil'] = 'python'
 
-    def open_restaurant(self):
-        print('The restaurant is open!')
+    for name, language in favorite_languages.items():
+        print(name.title() + "'s favorite language is " +
+            language.title() + ".")
