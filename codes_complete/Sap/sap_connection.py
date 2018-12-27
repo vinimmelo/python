@@ -7,6 +7,7 @@ Created on 21 December 2018
 import sys, win32com.client
 
 def main():
+    """ Simple test """
     try:
         SapGui = win32com.client.GetObject("SAPGUI").GetScriptingEngine
         if not type(SapGui) == win32com.client.CDispatch:
