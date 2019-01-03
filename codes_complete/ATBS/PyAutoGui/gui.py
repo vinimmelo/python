@@ -23,9 +23,9 @@ class PyGuiAutomation:
         """ Just returns GUI object """
         return gui
 
-    def moveTo(self, x, y):
+    def moveTo(self, x, y, time=0.25):
         """Sample: moveTo(100, 100) """
-        return gui.moveTo(x, y, duration=0.25)
+        return gui.moveTo(x, y, duration=time)
 
     def moveRel(self, x, y):
         """Sample: moveRel(100, 100) """
@@ -39,10 +39,17 @@ class PyGuiAutomation:
         """Sample: click(100, 100, 'right') """
         return gui.click(x, y, button)
 
+    def doubleClick(self, x = None, y = None):
+        """Sample: doubleClick(100, 100) """
+        return gui.doubleClick(x, y)
+
     def scroll(self, number):
         """Sample: scroll(200) """
         return gui.scroll(number)
 
     def typewrite(self, words, speed=0.1):
-        """Sample: typewrite("Hey man, its working!!!") """
+        """
+        Sample 1: typewrite("Hey man, its working!!!")
+        Sample 2: typewrite(['ctrl', 'c'])
+        """
         return gui.typewrite(words, speed)
