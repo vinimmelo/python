@@ -1,21 +1,19 @@
 from flask import Flask, render_template, request, redirect, session, flash, url_for
-from flask_mysqldb import MySql
-
-from models import Jogo, Usuario
 from dao import JogoDao, UsuarioDao
+from flask_mysqldb import MySQL
+from models import Jogo, Usuario
+
 
 app = Flask(__name__)
 app.secret_key = 'alura'
 
-app.config.update(
-    MYSQL_HOST='0.0.0.0',
-    MYSQL_USER='root',
-    MYSQL_PASSWORD='admin',
-    MYSQL_DB='jogoteca',
-    MYSQL_PORT=8080
-)
+app.config['MYSQL_HOST'] = "localhost"
+app.config['MYSQL_USER'] = "root"
+app.config['MYSQL_PASSWORD'] = "admin"
+app.config['MYSQL_DB'] = "jogoteca"
+app.config['MYSQL_PORT'] = 3306
 
-db = MySql(app)
+db = MySQL(app)
 jogo_dao = JogoDao(db)
 usuario_dao = UsuarioDao(db)
 
@@ -28,7 +26,7 @@ def index():
 
 @app.route('/novo')
 def novo():
-    if 'usuario_logado' not in session or session['usuario_logado'] == None :
+    if 'usuario_logado' not in session or session['usuario_logado'] == None:
         return redirect(url_for('login', proxima=url_for('novo')))
     return render_template('novo.html', titulo='Novo Jogo')
 
@@ -42,6 +40,30 @@ def criar():
     jogo_dao.salvar(jogo)
     return redirect(url_for('index'))
 
+
+@app.route('/editar/<int:id>')
+def editar(id):
+    if 'usuario_logado' not in session or session['usuario_logado'] == None:
+        return redirect(url_for('login', proxima=url_for('editar')))
+    jogo = jogo_dao.busca_por_id(id)
+    return render_template('editar.html', titulo='Editando Jogo', jogo=jogo)
+
+
+@app.route('/atualizar', methods=['POST',])
+def atualizar():
+    nome = request.form['nome']
+    categoria = request.form['categoria']
+    console = request.form['console']
+    jogo = Jogo(nome, categoria, console, id=request.form['id'])
+    jogo_dao.salvar(jogo)
+    return redirect(url_for('index'))
+
+
+@app.route('/deletar/<int:id>')
+def deletar(id):
+    jogo_dao.deletar(id)
+    flash('O jogo foi removido com sucesso!')
+    return redirect(url_for('index'))
 
 @app.route('/login')
 def login():
@@ -59,7 +81,7 @@ def autenticar():
             proxima_pagina = request.form['proxima']
             return redirect(proxima_pagina)
     else:
-        flash('Não logado, tente novamente!')
+        flash('Não logado, tente denovo!')
         return redirect(url_for('login'))
 
 

@@ -7,3 +7,4 @@ pyperclip
 openpyxl
 flask
 flask-restful
+flask-mysql
