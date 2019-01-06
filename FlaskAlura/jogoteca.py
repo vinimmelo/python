@@ -8,10 +8,10 @@ app = Flask(__name__)
 app.secret_key = 'alura'
 
 app.config['MYSQL_HOST'] = "localhost"
-app.config['MYSQL_USER'] = "root"
+app.config['MYSQL_USER'] = "vinicius"
 app.config['MYSQL_PASSWORD'] = "admin"
 app.config['MYSQL_DB'] = "jogoteca"
-app.config['MYSQL_PORT'] = 3306
+app.config['MYSQL_PORT'] = 8080
 
 db = MySQL(app)
 jogo_dao = JogoDao(db)
