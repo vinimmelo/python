@@ -4,6 +4,7 @@ from flask import Flask, render_template, request, redirect, session, flash, url
 from dao import JogoDao, UsuarioDao
 from flask_mysqldb import MySQL
 from models import Jogo, Usuario
+import time
 
 
 app = Flask(__name__)
@@ -36,16 +37,16 @@ def novo():
 
 @app.route('/criar', methods=['POST',])
 def criar():
-    nome = request. form['nome']
-    categoria = request. form['categoria']
-    console = request. form['console']
+    nome = request.form['nome']
+    categoria = request.form['categoria']
+    console = request.form['console']
     jogo = Jogo(nome, categoria, console)
-    jogo_dao.salvar(jogo)
+    jogo = jogo_dao.salvar(jogo)
 
     arquivo = request.files['arquivo']
     upload_path = app.config['UPLOAD_PATH']
-    arquivo.save(f'{upload_path}/capa{jogo.id}.jpg')
-
+    timestamp = time.time()
+    arquivo.save(f'{upload_path}/capa{jogo.id}-{timestamp}.jpg')
     return redirect(url_for('index'))
 
 
@@ -54,8 +55,15 @@ def editar(id):
     if 'usuario_logado' not in session or session['usuario_logado'] == None:
         return redirect(url_for('login', proxima=url_for('editar')))
     jogo = jogo_dao.busca_por_id(id)
-    return render_template('editar.html', titulo='Editando Jogo', jogo=jogo,
-                           capa_jogo=f'capa{id}.jpg')
+    nome_imagem = recupera_imagem(id)
+    return render_template('editar.html', titulo='Editando Jogo', jogo=jogo
+                           , capa_jogo=nome_imagem or 'capa_padrao.jpg')
+
+
+def recupera_imagem(id):
+    for nome_arquivo in os.listdir(app.config['UPLOAD_PATH']):
+        if f'capa{id}' in nome_arquivo:
+            return nome_arquivo
 
 
 @app.route('/atualizar', methods=['POST',])
@@ -64,8 +72,19 @@ def atualizar():
     categoria = request.form['categoria']
     console = request.form['console']
     jogo = Jogo(nome, categoria, console, id=request.form['id'])
+
+    arquivo = request.files['arquivo']
+    upload_path = app.config['UPLOAD_PATH']
+    deleta_arquivo(jogo.id)
+    timestamp = time.time()
+    arquivo.save(f'{upload_path}/capa{jogo.id}-{timestamp}.jpg')
     jogo_dao.salvar(jogo)
     return redirect(url_for('index'))
+
+
+def deleta_arquivo(id):
+    arquivo = recupera_imagem(id)
+    os.remove(os.path.join(app.config['UPLOAD_PATH'], arquivo))
 
 
 @app.route('/deletar/<int:id>')
