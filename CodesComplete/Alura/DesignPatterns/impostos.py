@@ -1,3 +1,5 @@
+"""Strategy Pattern"""
+
 def calcula_icms(orcamento):
     return orcamento.valor * 0.1
 

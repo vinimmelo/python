@@ -1,4 +1,4 @@
-from Strategy.impostos import calcula_icms, calcula_iss
+from impostos import calcula_icms, calcula_iss
 
 class Calculador_de_impostos:
 
@@ -8,7 +8,7 @@ class Calculador_de_impostos:
 
 
 if __name__ == '__main__':
-    from Strategy.orcamento import Orcamento
+    from orcamento import Orcamento
 
     orcamento = Orcamento(500.0)
     calculador_de_impostos = Calculador_de_impostos()
