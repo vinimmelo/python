@@ -11,7 +11,7 @@ import os
 def run_macro(filename: str, macro_name: str):
     """
     Run macro inside excel.
-    Usage Example: run_macro(r'C:/Users/brmelovi/Desktop/Demand Capture Colombia.xlsb', 'Main.teste')
+    Usage Example: run_macro(r'C:/Users/User/Desktop/Colombia.xlsb', 'Main.teste')
     """
     if os.path.exists(filename):
         xl=win32com.client.Dispatch('Excel.Application')
@@ -51,4 +51,4 @@ def test_running_two_macros():
 
 
 if __name__ == '__main__':
-    test_running_two_macros()
+    run_macro(r'C:\Users\brmelovi\Desktop\Cartas para clientes Purina - MACRO.xlsb', 'macroCartasColombia.teste10s')
