@@ -1,14 +1,16 @@
 import requests
 import bs4
+import collections
 
+WeatherReport = collections.namedtuple('WeatherReport', 'cond temp location')
 
 
 def main():
     print_the_header()
-    html_page = get_html_from_web('us/or/portland')
-    get_weather_from_html(html_page)
-    # parse html
-    # display the selected data
+    currently_city = 'us/or/portland'
+    html_page = get_html_from_web(currently_city)
+    report = get_weather_from_html(html_page)
+    print(f'The temp in {report.location} is {report.cond} and {report.temp}ºF')
 
 
 def print_the_header():
@@ -26,12 +28,25 @@ def get_html_from_web(city):
 
 
 def get_weather_from_html(html_page):
-    cityCss = '.region-content-header-h1'
-    weatherScaleCss = '.wu-unit-temperature.wu-label'
-    weatherTempCss = '.wu-unit-temperature.wu-label'
+    weatherScaleCss = '.wu-value-to'
     weatherConditionCss = '.condition-icon'
     soup = bs4.BeautifulSoup(html_page, 'html.parser')
-    pass
+    location = soup.h1.get_text()
+    condition = soup.select(weatherConditionCss)[0].get_text()
+    temp = soup.select(weatherScaleCss)[0].get_text()
+    location = cleanup_text(location)
+    condition = cleanup_text(condition)
+    temp = cleanup_text(temp)
+    report = WeatherReport(condition, temp, location)
+    return report
+
+
+def cleanup_text(text: str):
+    if not text:
+        return text
+
+    text = text.strip()
+    return text
 
 
 if __name__ == '__main__':
