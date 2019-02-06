@@ -1,8 +1,8 @@
-m    from tkinter import *
+from tkinter import *
 from selenium import *
 
 """def decisionTree():
-    
+
     resposta = str(res.get())
     if (resposta=='u' or resposta=='U'):
         urbana()
@@ -19,12 +19,12 @@ from selenium import *
 def urbana():
     metros=int(text_m.get())
     arvores=int(text_a.get())
-    
+
     if metros <= 0 or arvores <= 0:
       lab4=Label(canvas, text="digite numeros positivos")
       lab4.place(x=10, y=500)
     else:
-        
+
         ida = ((arvores*7/metros)*100)
         if ida <= 50:
            isa = ((50-ida))
@@ -52,21 +52,21 @@ def urbana():
      ideal=(arvores*isa)/ida
      lab7=Label(canvas, text='http://www.centroeducacionalfsa.org.br/cefsa/calculadora_carbono/index.aspx',font=("arial",12, "bold"),bg='light green')
      lab7.place(x=10,y=450)
-     decisionTree()   
+     decisionTree()
 """
 
 
 def limpar():
-    
+
            #lab5=["text"]=input.get()
            #input.delete(0, END)
            #return
-           
+
            lab5=Label(canvas, text="                                             ", bg='light green',fg='light green',font=("arial",25, "bold"))
            lab5.place(x=10, y=400)
            lab6=Label(canvas, text="                                             ",bg='light green',fg='light green',font=("arial",25, "bold"))
            lab6.place(x=10, y=500)
-        
+
            lab7=Label(canvas, text="                                             ",bg='light green',fg='light green',font=("arial",25, "bold"))
            lab7.place(x=10,y=450)
            lab4=Label(canvas, text="                                             ",bg='light green',fg='light green',font=("arial",25, "bold"))
@@ -77,7 +77,7 @@ window.title('Densidade arborea')
 text_m=StringVar()
 text_a=StringVar()
 res=StringVar()
-                         
+
 canvas=Canvas(window, width=800, height=600)
 canvas.configure(background="light green")
 canvas.pack()
@@ -99,7 +99,7 @@ canvas.create_image(450, 150, anchor = NW, image=my_image)
 
 #labint=Label(canvas, text="Faça sua escolha entre rural e urbano",font=("arial",8,"bold"),bg='light green')
 #resposta= Entry(canvas,font=('arial', 8,'bold'),textvariable=res)
-#resposta.place(x=300,y=50)              
+#resposta.place(x=300,y=50)
 escolhaM= Entry(canvas,font=('arial', 8,'bold'),textvariable=text_m)
 escolhaM.place(x=225, y=200)
 
@@ -111,7 +111,3 @@ btn.place(x=350,y=200)
 
 btn1=Button(text='limpar',font=("arial",8,"bold"), width=4,height=2,command=limpar)
 btn1.place(x=405,y=200)
-
-            
-
-
