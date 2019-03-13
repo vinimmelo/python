@@ -1,6 +1,6 @@
 # Should receive a tuple that will update the database.
 
-from collections import OrderedDict
+from collections import OrderedDict, Counter
 
 carteiras = [
     {
@@ -36,27 +36,18 @@ carteiras = [
 ]
 
 
-def _numeros_desativados(lista_socios) -> dict:
-    numero_dos_socios_carteira = [socio['numero'] for socio in carteiras]
-    numero_socios = [socio[0] for socio in lista_socios]
-
-    desativados = {}
-    for numero in numero_dos_socios_carteira:
-        if numero not in numero_socios:
-            desativados[numero] = 0
-
-    return desativados
+def _lista_atualizada(lista_socios):
+    ativados = {numero: bilhete for (numero, bilhete) in lista_socios}
+    todos_os_socios = OrderedDict(((socio['numero'], 0) for socio in carteiras))
+    todos_os_socios.update(ativados)
+    return todos_os_socios
 
 
 def atualiza_socios(lista_socios):
-    desativados = _numeros_desativados(lista_socios)
-
-    ativados = {numero: bilhete for (numero, bilhete) in lista_socios}
-
-    numeros_totais = OrderedDict(sorted({**ativados, **desativados}.items()))
+    todos_os_socios = _lista_atualizada(lista_socios)
 
     nova_carteira = []
-    for numero, bilhete in numeros_totais.items():
+    for numero, bilhete in todos_os_socios.items():
         if bilhete == 0:
             resultado = _atualiza_carteira(numero, False, bilhete)
         else:
