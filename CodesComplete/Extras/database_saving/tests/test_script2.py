@@ -1,4 +1,4 @@
-from CodesComplete.Extras.database_saving import atualiza_socios
+from CodesComplete.Extras.database_saving.script import atualiza_socios
 
 
 def test_atualiza_socios():

@@ -1,4 +1,4 @@
-from CodesComplete.Extras.converter import dictionary_converter, string_converter
+from CodesComplete.Extras.converter.script import dictionary_converter, string_converter
 
 def test_script1_with_dictionary():
     result = dictionary_converter("teste conaz")
@@ -9,3 +9,5 @@ def test_script1_with_unified_string():
     result = string_converter("aaaaabbbbccccccaaaaaaa")
     assert result == "5a4b6c7a"
 
+    result2 = string_converter("dddeeerrriiieeeedddd")
+    assert result2 == "3d3e3r3i4e4d"

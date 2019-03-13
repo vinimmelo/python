@@ -1,5 +1,6 @@
 import time
 from clockdeco import clock
+from functools import lru_cache
 
 @clock
 def snooze(seconds):
@@ -11,8 +12,12 @@ def factorial(n):
     return 1 if n < 2 else n*factorial(n-1)
 
 
+@lru_cache()
+@clock
+def fibonacci(n):
+    if n < 2:
+        return n
+    return fibonacci(n-2) + fibonacci(n-1)
+
 if __name__ == "__main__":
-    print('*' * 40, 'Calling snooze(.123)')
-    snooze(.123)
-    print('*' * 40, 'Calling factorial(6)')
-    print('6! =', factorial(6))
+    fibonacci(31)
