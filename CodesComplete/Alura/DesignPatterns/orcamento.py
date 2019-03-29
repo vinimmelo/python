@@ -21,7 +21,6 @@ class Orcamento:
 
 
 class Item:
-
     def __init__(self, nome, valor):
         self.__nome = nome
         self.__valor = valor
@@ -33,4 +32,3 @@ class Item:
     @property
     def nome(self):
         return self.__nome
-

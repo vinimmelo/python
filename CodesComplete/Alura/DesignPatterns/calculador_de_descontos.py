@@ -1,13 +1,14 @@
-from descontos import DescontoPorCincoItens, DescontoPorMaisDeQuinhentosReais, SemDesconto
+from descontos import DescontoPorCincoItens
+from descontos import DescontoPorMaisDeQuinhentosReais, SemDesconto
+
 
 class CalculadorDeDescontos:
-
     def calcula(self, orcamento):
         desconto = DescontoPorCincoItens(
-            DescontoPorMaisDeQuinhentosReais(SemDesconto())
-        )
+            DescontoPorMaisDeQuinhentosReais(SemDesconto()))
 
         return desconto.calcula(orcamento)
+
 
 if __name__ == '__main__':
     from orcamento import Orcamento, Item
@@ -20,4 +21,3 @@ if __name__ == '__main__':
     calculador_de_descontos = CalculadorDeDescontos()
     desconto = calculador_de_descontos.calcula(orcamento)
     print("Desconto calculado de: {:3.2f}".format(desconto))
-

@@ -1,17 +1,28 @@
 # -*- coding: UTF-8 -*-
+"""
+Calculo de impostos e taxas, modelos
+"""
 
 from abc import ABCMeta, abstractmethod
 
 
 class TemplateDeImpostoCondicional:
+    """
+    Template dos impostos
+    """
     __metaclass__ = ABCMeta
+
+    def __init__(self, outro_imposto=None):
+        self._outro_imposto = outro_imposto
 
     def calcula(self, orcamento):
 
         if self.deve_usar_maxima_taxacao(orcamento):
-            return self.maxima_taxacao(orcamento)
+            return self.maxima_taxacao(
+                orcamento) + self.calculo_de_outro_imposto(orcamento)
         else:
-            return self.minima_taxacao(orcamento)
+            return self.minima_taxacao(
+                orcamento) + self.calculo_de_outro_imposto(orcamento)
 
     @abstractmethod
     def deve_usar_maxima_taxacao(self, orcamento):
@@ -25,21 +36,24 @@ class TemplateDeImpostoCondicional:
     def minima_taxacao(self, orcamento):
         pass
 
+    def calculo_de_outro_imposto(self, orcamento):
+        if (self._outro_imposto is None):
+            return 0
+        else:
+            return self._outro_imposto.calcula(orcamento)
 
-class ISS:
 
+class ISS(TemplateDeImpostoCondicional):
     def calcula(self, orcamento):
         return orcamento.valor * 0.1
 
 
-class ICMS:
-
+class ICMS(TemplateDeImpostoCondicional):
     def calcula(self, orcamento):
         return orcamento.valor * 0.06
 
 
 class ICPP(TemplateDeImpostoCondicional):
-
     def deve_usar_maxima_taxacao(self, orcamento):
         return orcamento.valor > 500
 
@@ -51,10 +65,10 @@ class ICPP(TemplateDeImpostoCondicional):
 
 
 class IKCV(TemplateDeImpostoCondicional):
-
     def deve_usar_maxima_taxacao(self, orcamento):
 
-        return orcamento.valor > 500 and self.__tem_item_maior_que_100_reais(orcamento)
+        return orcamento.valor > 500 and self.__tem_item_maior_que_100_reais(
+            orcamento)
 
     def maxima_taxacao(self, orcamento):
         return orcamento.valor * 0.1
@@ -63,7 +77,6 @@ class IKCV(TemplateDeImpostoCondicional):
         return orcamento.valor * 0.06
 
     def __tem_item_maior_que_100_reais(self, orcamento):
-
         for item in orcamento.obter_itens():
             if item.valor > 100:
                 return True
