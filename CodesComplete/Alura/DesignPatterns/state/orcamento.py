@@ -7,6 +7,9 @@ class EstadoDeUmOrcamento(object):
 
     __metaclass__ = ABCMeta
 
+    def __init__(self):
+        self.desconto_aplicado = False
+
     @abstractmethod
     def aplica_desconto_extra(self, orcamento):
         pass
@@ -26,7 +29,9 @@ class EstadoDeUmOrcamento(object):
 
 class EmAprovacao(EstadoDeUmOrcamento):
     def aplica_desconto_extra(self, orcamento):
-        orcamento.adiciona_desconto_extra(orcamento.valor * .02)
+        if not self.desconto_aplicado:
+            orcamento.adiciona_desconto_extra(orcamento.valor * .02)
+            self.desconto_aplicado = True
 
     def aprova(self, orcamento):
         orcamento.estado_atual = Aprovado()
@@ -40,7 +45,9 @@ class EmAprovacao(EstadoDeUmOrcamento):
 
 class Aprovado(EstadoDeUmOrcamento):
     def aplica_desconto_extra(self, orcamento):
-        orcamento.adiciona_desconto_extra(orcamento.valor * .05)
+        if not self.desconto_aplicado:
+            orcamento.adiciona_desconto_extra(orcamento.valor * .02)
+            self.desconto_aplicado = True
 
     def aprova(self, orcamento):
         raise Exception('Orcamento já está em estado de aprovação.')
@@ -90,7 +97,7 @@ class Orcamento(object):
         self.estado_atual.aplica_desconto_extra(self)
 
     def adiciona_desconto_extra(self, desconto):
-        self.__desconto_extra += desconto
+        self.__desconto_extra = desconto
 
     def aprova(self):
         self.estado_atual.aprova(self)
@@ -146,6 +153,9 @@ if __name__ == '__main__':
     print orcamento.valor
 
     orcamento.aprova()
+    orcamento.aplica_desconto_extra()
+    orcamento.aplica_desconto_extra()
+    orcamento.aplica_desconto_extra()
     orcamento.aplica_desconto_extra()
     print orcamento.valor
 
