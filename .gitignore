@@ -112,3 +112,4 @@ only_test.py
 /.idea
 /internal
 .vscode/settings.json
+*.swp
