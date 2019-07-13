@@ -4,16 +4,19 @@ from tombola import Tombola
 class LotteryBlower(Tombola):
     def __init__(self, iterable):
         self._balls = list(iterable)
-    # TODO: finalizar
-    def load(self, items):
-        self._items.extend(items)
-        self._randomizer.shuffle(self._items)
+
+    def load(self, iterable):
+        self._balls.extend(iterable)
 
     def pick(self):
         try:
-            return self._items.pop()
-        except IndexError:
+            position = random.randrange(len(self._balls))
+        except ValueError:
             raise LookupError('pick from empty BingoCage')
+        return self._balls.pop(position)
 
-    def __call__(self):
-        self.pick()
+    def loaded(self):
+        return bool(self._balls)
+
+    def inspect(self):
+        return tuple(sorted(self._balls))
