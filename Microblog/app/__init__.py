@@ -13,3 +13,5 @@ db.create_all()
 login = LoginManager(app)
 
 from app import routes
+
+app.run(debug=True)
